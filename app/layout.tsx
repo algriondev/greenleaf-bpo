@@ -1,39 +1,30 @@
 import type { Metadata } from 'next'
-import { Bebas_Neue, Inter } from 'next/font/google'
+import { Poppins, Inter } from 'next/font/google'
 import './globals.css'
 
-const bebasNeue = Bebas_Neue({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-syne',
+  weight: ['600', '700'],
+  variable: '--font-poppins',
   display: 'swap',
 })
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-dm',
+  weight: ['400', '500'],
+  variable: '--font-inter',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: 'Green Leaf Business Connect Ltd | BPO Solutions Kenya',
-  description:
-    'Africa\'s premier BPO partner — delivering world-class Business Process Outsourcing solutions from Kenya to the globe. Customer experience, data processing, finance, HR, and IT support.',
-  keywords: 'BPO Kenya, Business Process Outsourcing Africa, Customer Support, Data Processing, Back Office, Green Leaf',
-  openGraph: {
-    title: 'Green Leaf Business Connect Ltd | BPO Solutions Kenya',
-    description: 'World-class BPO solutions from the heart of Africa.',
-    type: 'website',
-  },
+  description: "Africa's premier BPO partner — delivering world-class Business Process Outsourcing solutions from Kenya to the globe.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${bebasNeue.variable} ${inter.variable}`}>
-      <body className="bg-dark text-white font-dm overflow-x-hidden">
-        {children}
-      </body>
+    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
+      <body>{children}</body>
     </html>
   )
 }

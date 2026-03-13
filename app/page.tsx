@@ -1,9 +1,8 @@
-import Cursor from '@/components/Cursor'
 import Background from '@/components/Background'
 import Navbar from '@/components/Navbar'
 import Ticker from '@/components/Ticker'
 import Hero from '@/components/Hero'
-import StatsStrip from '@/components/StatsStrip'
+import About from '@/components/about'
 import Services from '@/components/Services'
 import WhyUs from '@/components/WhyUs'
 import Industries from '@/components/Industries'
@@ -17,16 +16,14 @@ import ScrollTop from '@/components/ScrollTop'
 export default function Home() {
   return (
     <>
-      <Cursor />
       <Background />
       <Navbar />
-
       <main>
         <div className="pt-[72px]">
           <Ticker />
         </div>
         <Hero />
-        <StatsStrip />
+        <About />
         <Services />
         <WhyUs />
         <Industries />
@@ -35,7 +32,6 @@ export default function Home() {
         <Testimonials />
         <CTABanner />
       </main>
-
       <Footer />
       <ScrollTop />
     </>
