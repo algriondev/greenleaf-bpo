@@ -10,22 +10,21 @@ export function EyebrowAmber({ children }: { children: React.ReactNode }) {
 
 const team = [
   {
-    initials:'JM', grad:['#0a4a0a','#25aa25'],
-    name:'James Mwangi', role:'Founder & CEO',
-    bio:"15+ years in global outsourcing. Former Director at Africa BPO Alliance. Founded Green Leaf to position Kenya as Africa's BPO capital and create lasting employment across the continent.",
+    initials:'AS', grad:['#0a4a0a','#25aa25'],
+    name:'Amar Shah', role:'Founder & CEO',
+    bio:'Visionary entrepreneur with deep roots in global business process outsourcing. Amar founded Green Leaf with a mission to establish Kenya as a world-class BPO hub, combining operational excellence with a people-first culture that drives lasting client success.',
   },
   {
-    initials:'AW', grad:['#6b3c00','#c07c10'],
-    name:'Amina Wanjiku', role:'Co-Founder & COO',
-    bio:'Operations strategist who has led BPO transformations across 12 countries. Amina architects the service delivery frameworks that consistently exceed client SLAs.',
+    initials:'SN', grad:['#6b3c00','#c07c10'],
+    name:'Samuel Njogu', role:'Co-Founder & COO',
+    bio:'Operations leader with extensive experience scaling BPO teams across East Africa and beyond. Samuel oversees day-to-day service delivery, ensuring every client engagement is executed with precision, consistency, and a commitment to exceeding agreed SLAs.',
   },
   {
-    initials:'DK', grad:['#0a4a0a','#25aa25'],
-    name:'David Kamau', role:'Chief Technology Officer',
-    bio:"AI & automation innovator from Nairobi's Silicon Savannah. David drives the technology backbone that keeps Green Leaf ahead of industry standards.",
+    initials:'KG', grad:['#0a4a0a','#25aa25'],
+    name:'Krushit Gudhka', role:'Co-Founder & CTO',
+    bio:"Technology architect and innovation driver behind Green Leaf's digital infrastructure. Krushit leads the design and implementation of AI-powered workflows and automation systems that keep Green Leaf at the cutting edge of modern BPO delivery.",
   },
 ]
-
 export default function About() {
   const { ref: storyRef, visible: storyVisible } = useReveal()
 

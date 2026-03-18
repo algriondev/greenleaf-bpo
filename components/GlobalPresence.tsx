@@ -12,13 +12,6 @@ const locations = [
   { label:'Toronto',    top:'27%', left:'14%' },
 ]
 
-const stats = [
-  { n:'15+',  l:'Countries Served'    },
-  { n:'6',    l:'Continental Markets' },
-  { n:'24/7', l:'Global Operations'   },
-  { n:'12+',  l:'Languages Supported' },
-]
-
 export default function GlobalPresence() {
   const { ref: lRef, visible: lVis } = useReveal()
   const { ref: rRef, visible: rVis } = useReveal()
@@ -34,14 +27,7 @@ export default function GlobalPresence() {
           <p style={{ fontFamily:'var(--font-inter)', fontSize:'1rem', lineHeight:1.76, color:'var(--fg-dim)', marginBottom:36 }}>
             From Nairobi, we serve clients across Africa, Europe, North America, the Middle East and beyond — 24 hours a day, across every time zone.
           </p>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:1, background:'var(--border-g)', border:'1px solid var(--border-g)', borderRadius:10, overflow:'hidden' }}>
-            {stats.map((s, i) => (
-              <div key={i} style={{ background:'var(--bg)', padding:'22px 24px' }}>
-                <div style={{ fontFamily:'var(--font-poppins)', fontWeight:700, fontSize:'1.9rem', color:'var(--accent)' }}>{s.n}</div>
-                <div style={{ fontFamily:'var(--font-inter)', fontSize:'0.78rem', color:'var(--fg-dim)', marginTop:4 }}>{s.l}</div>
-              </div>
-            ))}
-          </div>
+          
         </div>
 
         <div ref={rRef} style={{ position:'relative', aspectRatio:'16/10', background:'rgba(37,170,37,0.04)', border:'1px solid var(--border-g)', borderRadius:12, overflow:'hidden', opacity:rVis?1:0, transform:rVis?'none':'translateY(22px)', transition:'opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s' }}>

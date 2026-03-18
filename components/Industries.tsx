@@ -6,16 +6,16 @@ function EyebrowGreen({ children }: { children: React.ReactNode }) {
 }
 
 const industries = [
-  { emoji:'🏦', name:'Banking & Finance',  count:'120+ clients' },
-  { emoji:'🏥', name:'Healthcare',          count:'85+ clients'  },
-  { emoji:'🛒', name:'E-Commerce',          count:'200+ clients' },
-  { emoji:'✈️', name:'Travel & Tourism',   count:'60+ clients'  },
-  { emoji:'📡', name:'Telecom & Media',     count:'45+ clients'  },
-  { emoji:'🏗️', name:'Real Estate',        count:'35+ clients'  },
-  { emoji:'🎓', name:'Education',           count:'70+ clients'  },
-  { emoji:'⚡', name:'Energy & Utilities',  count:'28+ clients'  },
-  { emoji:'🚚', name:'Logistics',           count:'55+ clients'  },
-  { emoji:'🛡️', name:'Insurance',          count:'40+ clients'  },
+  { emoji:'🏦', name:'Banking & Finance'},
+  { emoji:'🏥', name:'Healthcare'},
+  { emoji:'🛒', name:'E-Commerce',},
+  { emoji:'✈️', name:'Travel & Tourism',},
+  { emoji:'📡', name:'Telecom & Media', },
+  { emoji:'🏗️', name:'Real Estate' },
+  { emoji:'🎓', name:'Education'},
+  { emoji:'⚡', name:'Energy & Utilities'},
+  { emoji:'🚚', name:'Logistics'},
+  { emoji:'🛡️', name:'Insurance'},
 ]
 
 export default function Industries() {
@@ -39,7 +39,7 @@ export default function Industries() {
               onMouseLeave={e => { const el=e.currentTarget as HTMLElement; el.style.borderColor='var(--border-g)'; el.style.background='rgba(37,170,37,0.05)'; el.style.transform='none'; el.style.boxShadow='none' }}>
               <span style={{ fontSize:'1.8rem' }}>{ind.emoji}</span>
               <span style={{ fontFamily:'var(--font-poppins)', fontWeight:600, fontSize:'0.86rem', color:'#f2f2f2' }}>{ind.name}</span>
-              <span style={{ fontFamily:'var(--font-inter)', fontSize:'0.72rem', color:'var(--fg-dim)' }}>{ind.count}</span>
+            
             </div>
           ))}
         </div>

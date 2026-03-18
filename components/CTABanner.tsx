@@ -16,7 +16,7 @@ export default function CTABanner() {
           Ready to Transform<br/>Your <span className="text-grad-green">Business Operations?</span>
         </h2>
         <p style={{ fontFamily:'var(--font-inter)', fontSize:'1rem', lineHeight:1.76, color:'var(--fg-dim)', marginBottom:36 }}>
-          Join 500+ global companies that trust Green Leaf Business Connect for world-class BPO solutions. Get a free consultation today.
+          Join global companies that trust Green Leaf Business Connect for world-class BPO solutions. Get a free consultation today.
         </p>
         <div style={{ display:'flex', flexWrap:'wrap', gap:16, alignItems:'center' }}>
           <Link href="mailto:info@greenleafbusinessconnect.com" className="btn btn-solid shimmer">
