@@ -13,10 +13,10 @@ export default function CTABanner() {
       <div ref={ref} style={{ maxWidth:680, position:'relative', zIndex:1, opacity:visible?1:0, transform:visible?'none':'translateY(22px)', transition:'opacity 0.7s ease, transform 0.7s ease' }}>
         <EyebrowGreen>Let&apos;s Connect</EyebrowGreen>
         <h2 style={{ fontSize:'clamp(1.8rem,3.6vw,2.9rem)', color:'#f2f2f2', marginBottom:14 }}>
-          Ready to Transform<br/>Your <span className="text-grad-green">Business Operations?</span>
+          Let&apos;s Start with<br/>a <span className="text-grad-green">30-Day Pilot</span>
         </h2>
         <p style={{ fontFamily:'var(--font-inter)', fontSize:'1rem', lineHeight:1.76, color:'var(--fg-dim)', marginBottom:36 }}>
-          Join global companies that trust Green Leaf Business Connect for world-class BPO solutions. Get a free consultation today.
+          We&apos;re actively onboarding our first client partnerships. Reach out to discuss a scoped pilot — no long-term commitment, direct access to the founders, and full transparency on results.
         </p>
         <div style={{ display:'flex', flexWrap:'wrap', gap:16, alignItems:'center' }}>
           <Link href="mailto:info@greenleafbusinessconnect.com" className="btn btn-solid shimmer">

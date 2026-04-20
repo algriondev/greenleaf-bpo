@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { useReveal } from '@/hooks/useReveal'
 
 export function EyebrowGreen({ children }: { children: React.ReactNode }) {
@@ -12,17 +13,20 @@ const team = [
   {
     initials:'AS', grad:['#0a4a0a','#25aa25'],
     name:'Amar Shah', role:'Founder & CEO',
-    bio:'Visionary entrepreneur with deep roots in global business process outsourcing. Amar founded Green Leaf with a mission to establish Kenya as a world-class BPO hub, combining operational excellence with a people-first culture that drives lasting client success.',
+    bio:'Entrepreneur with a focus on building Kenya into a recognised BPO destination. Amar leads Green Leaf with a hands-on approach — every client deal goes through him directly.',
+    linkedin:'https://linkedin.com/in/amar-shah',
   },
   {
     initials:'SN', grad:['#6b3c00','#c07c10'],
     name:'Samuel Njogu', role:'Co-Founder & COO',
-    bio:'Operations leader with extensive experience scaling BPO teams across East Africa and beyond. Samuel oversees day-to-day service delivery, ensuring every client engagement is executed with precision, consistency, and a commitment to exceeding agreed SLAs.',
+    bio:'Operations professional with experience in East African service delivery. Samuel owns day-to-day execution and is the primary contact for service quality and SLA commitments.',
+    linkedin:'https://linkedin.com/in/samuel-njogu',
   },
   {
     initials:'KG', grad:['#0a4a0a','#25aa25'],
     name:'Krushit Gudhka', role:'Co-Founder & CTO',
-    bio:"Technology architect and innovation driver behind Green Leaf's digital infrastructure. Krushit leads the design and implementation of AI-powered workflows and automation systems that keep Green Leaf at the cutting edge of modern BPO delivery.",
+    bio:'Technology lead responsible for Green Leaf\'s tooling, workflows, and data infrastructure. Krushit ensures the technical side of every client engagement is set up for reliability from day one.',
+    linkedin:'https://linkedin.com/in/krushit-gudhka',
   },
 ]
 export default function About() {
@@ -45,11 +49,11 @@ export default function About() {
             <span className="text-grad-amber">Built for the World.</span>
           </h2>
           <p style={{ fontFamily:'var(--font-inter)', fontWeight:400, fontSize:'1rem', lineHeight:1.82, color:'var(--fg-dim)' }}>
-            Green Leaf Business Connect was founded in 2015 by a team of Kenyan entrepreneurs who
-            believed Africa had the talent, energy, and ambition to compete on the global BPO stage.
-            What started as a 12-person customer support team in Westlands, Nairobi has grown into
-            a full-service BPO powerhouse serving clients in 15+ countries — without ever losing
-            the personal touch and values that defined us from day one.
+            Green Leaf Business Connect was founded by a team of Kenyan entrepreneurs who believe
+            Africa has the talent, energy, and ambition to compete on the global BPO stage.
+            We&apos;re based in Westlands, Nairobi — a founder-led team building world-class BPO
+            capabilities with the transparency and personal attention that only a new, hungry
+            company can offer.
           </p>
           <div style={{ width:56, height:2, background:'var(--amber)', margin:'28px auto 0', borderRadius:2 }}/>
         </div>
@@ -134,12 +138,21 @@ function LeaderCard({ person, delay }: { person: typeof team[0]; delay: number }
       transform:visible ? 'none' : 'translateY(22px)',
       transition:`opacity 0.6s ease ${delay}ms, transform 0.6s ease ${delay}ms`,
     }}>
-      <div style={{
-        width:52, height:52, borderRadius:'50%',
-        background:`linear-gradient(135deg, ${person.grad[0]}, ${person.grad[1]})`,
-        display:'flex', alignItems:'center', justifyContent:'center', marginBottom:18,
-      }}>
-        <span style={{ fontFamily:'var(--font-poppins)', fontWeight:700, color:'#fff', fontSize:'0.95rem' }}>{person.initials}</span>
+      <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', marginBottom:18 }}>
+        <div style={{
+          width:52, height:52, borderRadius:'50%',
+          background:`linear-gradient(135deg, ${person.grad[0]}, ${person.grad[1]})`,
+          display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0,
+        }}>
+          <span style={{ fontFamily:'var(--font-poppins)', fontWeight:700, color:'#fff', fontSize:'0.95rem' }}>{person.initials}</span>
+        </div>
+        <Link href={person.linkedin} target="_blank" rel="noopener noreferrer"
+          style={{ display:'flex', alignItems:'center', gap:6, fontFamily:'var(--font-inter)', fontSize:'0.72rem', color:'var(--fg-dim)', textDecoration:'none', border:'1px solid var(--border)', borderRadius:6, padding:'5px 10px', transition:'all 0.2s' }}
+          onMouseEnter={e => { const el=e.currentTarget as HTMLElement; el.style.borderColor='var(--amber)'; el.style.color='var(--amber)' }}
+          onMouseLeave={e => { const el=e.currentTarget as HTMLElement; el.style.borderColor='var(--border)'; el.style.color='var(--fg-dim)' }}>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </Link>
       </div>
       <h3 style={{ fontFamily:'var(--font-poppins)', fontWeight:600, fontSize:'1rem', color:'#f2f2f2', marginBottom:3 }}>{person.name}</h3>
       <p style={{ fontFamily:'var(--font-inter)', fontWeight:500, fontSize:'0.76rem', color:'var(--amber)', marginBottom:14 }}>{person.role}</p>

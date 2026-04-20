@@ -4,12 +4,6 @@ import { useReveal } from '@/hooks/useReveal'
 
 const locations = [
   { label:'Nairobi HQ', top:'54%', left:'57%' },
-  { label:'London',     top:'22%', left:'44%' },
-  { label:'New York',   top:'33%', left:'17%' },
-  { label:'Dubai',      top:'36%', left:'63%' },
-  { label:'Sydney',     top:'70%', left:'80%' },
-  { label:'Berlin',     top:'19%', left:'49%' },
-  { label:'Toronto',    top:'27%', left:'14%' },
 ]
 
 export default function GlobalPresence() {
@@ -22,10 +16,10 @@ export default function GlobalPresence() {
         <div ref={lRef} style={{ opacity:lVis?1:0, transform:lVis?'none':'translateY(22px)', transition:'opacity 0.7s ease, transform 0.7s ease' }}>
           <EyebrowGreen>Our Reach</EyebrowGreen>
           <h2 style={{ fontSize:'clamp(1.8rem,3.4vw,2.7rem)', color:'#f2f2f2', marginBottom:14 }}>
-            Headquartered in <span className="text-grad-green">Kenya</span>,<br/>Operating Globally
+            Headquartered in <span className="text-grad-green">Nairobi</span>,<br/>Open to Clients Globally
           </h2>
           <p style={{ fontFamily:'var(--font-inter)', fontSize:'1rem', lineHeight:1.76, color:'var(--fg-dim)', marginBottom:36 }}>
-            From Nairobi, we serve clients across Africa, Europe, North America, the Middle East and beyond — 24 hours a day, across every time zone.
+            We operate from Westlands, Nairobi and work remotely with clients across East Africa and internationally. Time zones are not a barrier — reach out and we&apos;ll make it work.
           </p>
           
         </div>

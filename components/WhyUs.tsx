@@ -4,10 +4,10 @@ import { EyebrowAmber } from './about'
 import { useReveal } from '@/hooks/useReveal'
 
 const features = [
-  { title:"Africa's #1 BPO Talent Pool", desc:"Kenya ranks among Africa's top BPO destinations — multilingual, tech-savvy professionals delivering quality at competitive costs." },
-  { title:'Scalable & Flexible Operations', desc:'Seamlessly scale from 10 to 10,000 agents. Our elastic model adapts to your demand cycles without compromising quality.' },
-  { title:'Technology-First Approach', desc:'Powered by AI, automation and advanced analytics — we future-proof your operations with cutting-edge technology.' },
-  { title:'Data Security & Compliance', desc:'GDPR-compliant, ISO-certified, with enterprise security protocols protecting your most sensitive business data.' },
+  { title:"Kenya's BPO Talent Pool", desc:"Nairobi ranks among Africa's top BPO destinations — multilingual, tech-savvy professionals delivering quality at competitive costs." },
+  { title:'Scalable & Flexible Operations', desc:'Start small and grow. Our model is built to adapt to your demand without the overhead of a large vendor.' },
+  { title:'Technology-First Approach', desc:'We build AI-assisted workflows and automation into every engagement — not as an add-on, but from the start.' },
+  { title:'Data Security & Compliance', desc:'GDPR-aware processes with clear data handling agreements. We document everything and keep you in control.' },
 ]
 
 export default function WhyUs() {
@@ -25,22 +25,22 @@ export default function WhyUs() {
               <div style={{ position:'absolute', inset:0, background:'linear-gradient(180deg, transparent 55%, rgba(61,34,0,0.5) 100%)' }}/>
             </div>
             <div style={{ position:'absolute', bottom:-18, right:-24, background:'rgba(61,34,0,0.96)', backdropFilter:'blur(18px)', border:'1px solid var(--border-a)', borderRadius:10, padding:'16px 22px', minWidth:148 }}>
-              <div style={{ fontFamily:'var(--font-poppins)', fontWeight:700, fontSize:'1.7rem', color:'var(--amber-lt)' }}>99.8%</div>
-              <div style={{ fontFamily:'var(--font-inter)', fontSize:'0.73rem', color:'var(--fg-dim)', marginTop:3 }}>SLA Compliance</div>
+              <div style={{ fontFamily:'var(--font-poppins)', fontWeight:700, fontSize:'1.7rem', color:'var(--amber-lt)' }}>NBO</div>
+              <div style={{ fontFamily:'var(--font-inter)', fontSize:'0.73rem', color:'var(--fg-dim)', marginTop:3 }}>Nairobi Headquartered</div>
             </div>
             <div style={{ position:'absolute', top:24, right:-28, background:'rgba(61,34,0,0.96)', backdropFilter:'blur(18px)', border:'1px solid var(--border-a)', borderRadius:10, padding:'16px 22px', minWidth:148 }}>
-              <div style={{ fontFamily:'var(--font-poppins)', fontWeight:700, fontSize:'1.7rem', color:'var(--amber-lt)' }}>ISO</div>
-              <div style={{ fontFamily:'var(--font-inter)', fontSize:'0.73rem', color:'var(--fg-dim)', marginTop:3 }}>Certified Operations</div>
+              <div style={{ fontFamily:'var(--font-poppins)', fontWeight:700, fontSize:'1.7rem', color:'var(--amber-lt)' }}>24/7</div>
+              <div style={{ fontFamily:'var(--font-inter)', fontSize:'0.73rem', color:'var(--fg-dim)', marginTop:3 }}>Coverage Available</div>
             </div>
           </div>
 
           <div ref={rRef} style={{ opacity:rVis?1:0, transform:rVis?'none':'translateX(24px)', transition:'opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s' }}>
             <EyebrowAmber>Our Advantage</EyebrowAmber>
             <h2 style={{ fontSize:'clamp(1.8rem,3.4vw,2.7rem)', color:'#f2f2f2', marginBottom:14 }}>
-              Why Global Brands<br/>Choose <span className="text-grad-amber">Green Leaf</span>
+              Why Choose<br/><span className="text-grad-amber">Green Leaf</span>
             </h2>
             <p style={{ fontFamily:'var(--font-inter)', fontSize:'1rem', lineHeight:1.76, color:'var(--fg-dim)', marginBottom:32 }}>
-              We combine the strategic advantage of Kenya&apos;s thriving tech talent ecosystem with enterprise-grade processes to deliver outcomes that exceed global benchmarks.
+              We combine Kenya&apos;s strong talent base with a founder-led team that stays close to every engagement — giving you faster decisions and a direct line to the people doing the work.
             </p>
             <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
               {features.map((f, i) => (
